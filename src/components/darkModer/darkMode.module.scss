@@ -1,0 +1,74 @@
+@import '../../styles/theme.module.scss';
+
+.dark-mode {
+  height: 100vh;
+
+  &.darktheme {
+    background-color: $black-one;
+  }
+}
+
+.header {
+  font-size: 4rem;
+
+  &.darktheme {
+    color: $darktheme-white-one;
+  }
+}
+
+.icon {
+  width: 120px;
+
+  animation: sun 25s infinite linear;
+}
+
+.moon-icon {
+  width: 120px;
+
+  animation: moon 2s infinite linear;
+}
+
+.button {
+  border: 2px solid $black-one;
+  border-radius: 18PX;
+  padding: 5px 20px;
+  font-weight: 700;
+  background: none;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $black-one;
+    color: $white-one;
+  }
+
+  &.darktheme {
+    border: 2px solid $darktheme-white-one;
+    color: $darktheme-white-one;
+
+    &:hover {
+      background-color: $darktheme-white-one;
+      color: $darktheme-black-one;
+    }
+  }
+}
+
+@keyframes sun {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+@keyframes moon {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(5deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
